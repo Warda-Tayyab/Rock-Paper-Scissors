@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -9,11 +10,14 @@ h1 {
   color: #fff;
   height: 5rem;
   line-height: 5rem;
+  font-size: 2rem; /* Adjusted for better scaling */
 }
 
 .choice {
-  height: 165px;
-  width: 165px;
+  height: 10vw; /* Use viewport width for responsive sizing */
+  width: 10vw;  /* Use viewport width for responsive sizing */
+  max-height: 165px;
+  max-width: 165px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -26,8 +30,8 @@ h1 {
 }
 
 img {
-  height: 150px;
-  width: 150px;
+  height: 80%; /* Adjust size relative to parent */
+  width: 80%;  /* Adjust size relative to parent */
   object-fit: cover;
   border-radius: 50%;
 }
@@ -38,6 +42,7 @@ img {
   align-items: center;
   gap: 3rem;
   margin-top: 5rem;
+  flex-wrap: wrap; /* Wrap items if needed */
 }
 
 .score-board {
@@ -47,6 +52,7 @@ img {
   font-size: 2rem;
   margin-top: 3rem;
   gap: 5rem;
+  flex-wrap: wrap; /* Wrap items if needed */
 }
 
 #user-score,
@@ -70,18 +76,17 @@ img {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .choices {
-    flex-direction: column;
     gap: 2rem;
   }
 
   .choice {
-    height: 125px;
-    width: 125px;
+    height: 15vw; /* Adjust height based on viewport width */
+    width: 15vw;  /* Adjust width based on viewport width */
   }
 
   img {
-    height: 110px;
-    width: 110px;
+    height: 80%;
+    width: 80%;
   }
 
   .score-board {
@@ -117,13 +122,13 @@ img {
   }
 
   .choice {
-    height: 100px;
-    width: 100px;
+    height: 20vw; /* Adjust height based on viewport width */
+    width: 20vw;  /* Adjust width based on viewport width */
   }
 
   img {
-    height: 90px;
-    width: 90px;
+    height: 80%;
+    width: 80%;
   }
 
   .score-board {
